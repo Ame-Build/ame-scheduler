@@ -4,7 +4,7 @@ use sea_orm::ActiveValue::Set;
 use ame_scheduler::{AddScheduleRequest, AddScheduleResponse, DeleteScheduleRequest};
 
 #[derive(Debug, Clone, PartialEq, DeriveEntityModel)]
-#[sea_orm(table_name = "scheduler_queue", schema_name = "yggdrasil")]
+#[sea_orm(table_name = "scheduler_queue", schema_name = "ame_build")]
 pub struct Model {
     #[sea_orm(primary_key)]
     pub id: i64,

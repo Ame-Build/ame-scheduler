@@ -1,6 +1,6 @@
-CREATE SCHEMA IF NOT EXISTS "yggdrasil";
-DROP TABLE IF EXISTS "yggdrasil"."scheduler_queue";
-CREATE TABLE "yggdrasil"."scheduler_queue"
+CREATE SCHEMA IF NOT EXISTS "ame_build";
+DROP TABLE IF EXISTS "ame_build"."scheduler_queue";
+CREATE TABLE "ame_build"."scheduler_queue"
 (
     "id"             bigserial                   NOT NULL PRIMARY KEY,
     "time"           timestamp without time zone NOT NULL,
@@ -8,4 +8,4 @@ CREATE TABLE "yggdrasil"."scheduler_queue"
     "future_subject" varchar                     NOT NULL,
     "consumed"       bool                        NOT NULL DEFAULT FALSE
 );
-CREATE INDEX "yggdrasil"."idx_scheduled_event_time" ON "yggdrasil".scheduler_queue ("time");
+CREATE INDEX "ame_build"."idx_scheduled_event_time" ON "ame_build".scheduler_queue ("time");
